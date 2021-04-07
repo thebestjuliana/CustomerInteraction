@@ -6,7 +6,10 @@ namespace CustomerInteraction
     {
         static void Main(string[] args)
         {
-
+            string question1 = "What is your favorite color ?";
+            string question2 = "What is your favorite season?";
+            string question3 = "Who would you rather talk to(your mother, your father, a stranger, aliens)";
+            string question4 = "Which would you rather be(wealthy, popular, accommodating, an alien)";
             bool exit = false;
 
             // The system should greet the user and get the following critical pieces of information
@@ -54,8 +57,21 @@ namespace CustomerInteraction
                 }
 
             }
-            double discount;
-
+            double discount = 0;
+            int daysUntilBirthday;
+            if (DateTime.Today.CompareTo(formatBday) < 0)
+            {
+                //bday this year is in future
+                daysUntilBirthday = (formatBday - DateTime.Today).Days;
+            }
+            else if (DateTime.Today.CompareTo(formatBday) > 0)
+            {
+                daysUntilBirthday = (formatBday.AddYears(1) - DateTime.Today).Days;
+            }
+            else
+            {
+                daysUntilBirthday = 0;
+            }
             if (formatBday == DateTime.Today)
             {
                 Console.WriteLine("Happy Birthday!! As our gift to you, you will receive 15% off of today's order");
@@ -106,10 +122,174 @@ namespace CustomerInteraction
                 {
                     Console.WriteLine("Goodbye!");
                     exit = true;
-
+                    break;
+                }
+                Console.WriteLine(question1);
+                string answer1 = Console.ReadLine();
+                switch (answer1.ToLower().Trim())
+                {
+                    case "red":
+                        survey += 8;
+                        break;
+                    case "blue":
+                        survey += 3;
+                        break;
+                    case "yellow":
+                        survey += 6;
+                        break;
+                    case "purple":
+                        survey += 1;
+                        break;
+                    case "black":
+                        survey += 0;
+                        break;
+                    case "white":
+                        survey += 0;
+                        break;
+                    default:
+                        survey += 5;
+                        break;
                 }
 
+                Console.WriteLine(question2);
+                string answer2 = Console.ReadLine();
+                switch (answer2.ToLower().Trim())
+                {
+                    case "summer":
+                        survey += 4;
+                        break;
+                    case "spring":
+                        survey += 9;
+                        break;
+                    case "winter":
+                        survey += 2;
+                        break;
+                    case "fall":
+                        survey += 11;
+                        break;
+                    default:
+                        survey += 1;
+                        break;
+                }
+                bool validAnswer = false;
+                string answer3 = "";
+                while (validAnswer == false)
+                {
+                    Console.WriteLine(question3);
+                    answer3 = Console.ReadLine();
+                    answer = answer3.ToLower().Trim();
+                    string[] words = answer.Split();
+
+                    switch (words[words.Length - 1])
+                    {
+                        case "mother":
+                            survey += 1;
+                            validAnswer = true;
+                            break;
+                        case "father":
+                            survey += 3;
+                            validAnswer = true;
+                            break;
+                        case "stranger":
+                            survey += 8;
+                            validAnswer = true;
+                            break;
+                        case "aliens":
+                            survey += 22;
+                            validAnswer = true;
+                            break;
+                        default:
+                            Console.WriteLine("Not sure what you mean.");
+                            break;
+                    }
+                }
+                validAnswer = false;
+                string answer4 = "";
+                while (validAnswer == false)
+                {
+                    Console.WriteLine(question4);
+                    answer4 = Console.ReadLine();
+                    answer = answer4.ToLower().Trim();
+                    string[] words2 = answer.Split();
+
+                    switch (words2[words2.Length - 1])
+                    {
+                        case "wealthy":
+                            survey += 7;
+                            validAnswer = true;
+                            break;
+                        case "popular":
+                            survey += 2;
+                            validAnswer = true;
+                            break;
+                        case "accommodating":
+                            survey += 10;
+                            validAnswer = true;
+                            break;
+                        case "alien":
+                            survey += 22;
+                            validAnswer = true;
+                            break;
+                        default:
+                            Console.WriteLine("Not sure what you mean.");
+                            break;
+                    }
+                }
+
+                string recommendedProduct = "";
+                if (survey > 50)
+                {
+                    recommendedProduct = "A full-sized black and white copy of Van Gogh’s “Starry Night.”";
+                }
+                else if (survey > 40)
+                {
+                    recommendedProduct = "Pickled elephant skull";
+                }
+                else if (survey > 30)
+                {
+                    recommendedProduct = "Lightening in a jar";
+                }
+                else if (survey > 20)
+                {
+                    recommendedProduct = "Ben Franklin bowling pin";
+                }
+                else if (survey > 10)
+                {
+                    recommendedProduct = "Bottle opener shaped bottle opener";
+
+                }
+                else if (survey > 0)
+                {
+                    recommendedProduct = "Shoes made of Swiss Cheese";
+                }
+                Console.WriteLine($"Thank you very much {nickname} for stopping by and taking our survey!" +
+                    $"We have a product recommendation for you based on your answers to the following questions.");
+                Console.WriteLine($"{question1}: {answer1}");
+                Console.WriteLine($"{question2}: {answer2}");
+                Console.WriteLine($"{question3}: {answer3}");
+                Console.WriteLine($"{question4}: {answer4}");
+
+                Console.WriteLine($"Your answers have convinces us you would probably enjoy a {recommendedProduct}.");
+
+                if (discount > 0)
+                {
+                    Console.WriteLine($"Don't forget you still have a {discount * 100}% discount you can use.");
+
+                    if (daysUntilBirthday < 15)
+                    {
+
+                        Console.WriteLine($"If you don't already have one, you should consider buying one for your birthday in {daysUntilBirthday} days.");
+
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"If you don't already have one, you should consider buying one");
+                }
+                Console.WriteLine("Thanks for shopping! Goodbye");
+                break;
             }
         }
     }
 }
+
