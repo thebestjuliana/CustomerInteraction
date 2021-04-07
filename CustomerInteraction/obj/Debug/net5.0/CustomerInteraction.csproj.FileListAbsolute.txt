@@ -1,0 +1,16 @@
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\bin\Debug\net5.0\CustomerInteraction.exe
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\bin\Debug\net5.0\CustomerInteraction.deps.json
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\bin\Debug\net5.0\CustomerInteraction.runtimeconfig.json
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\bin\Debug\net5.0\CustomerInteraction.runtimeconfig.dev.json
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\bin\Debug\net5.0\CustomerInteraction.dll
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\bin\Debug\net5.0\ref\CustomerInteraction.dll
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\bin\Debug\net5.0\CustomerInteraction.pdb
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\CustomerInteraction.csprojAssemblyReference.cache
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\CustomerInteraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\CustomerInteraction.AssemblyInfoInputs.cache
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\CustomerInteraction.AssemblyInfo.cs
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\CustomerInteraction.csproj.CoreCompileInputs.cache
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\CustomerInteraction.dll
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\ref\CustomerInteraction.dll
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\CustomerInteraction.pdb
+C:\Users\sheeh\source\repos\CustomerInteraction\CustomerInteraction\obj\Debug\net5.0\CustomerInteraction.genruntimeconfig.cache
